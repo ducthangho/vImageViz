@@ -1,0 +1,64 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Image url",
+            "displayNameKey": "settingsImageUrl",
+            "name": "category",
+            "kind": "GroupingOrMeasure"
+        }
+    ],
+    "objects": {
+        "imageOptions": {
+            "displayName": "Image options",
+            "displayNameKey": "settingsImageOptions",
+          "properties": {
+            "circle": {
+              "displayName": "Circle",
+              "displayNameKey": "settingsCircle",
+              "type": { 
+                "bool": true 
+              }
+            },
+            "borderColor": {
+              "displayName": "Border color",
+              "displayNameKey": "settingsBorderColor",
+              "type": {
+                 "fill": {
+                   "solid": {
+                     "color" : true
+                   }
+                 }
+              }
+            },
+            "borderWidth": {
+              "displayName": "Border width",
+              "displayNameKey": "settingsBorderWidth",
+              "type": { 
+                "integer": true 
+              }
+            }
+          }
+        }
+    },
+    "dataViewMappings": [
+      {
+        "conditions": [
+          {
+            "category": {
+              "max": 1
+            }
+          }
+        ],
+        "categorical": {
+          "categories": {
+            "for": {
+              "in": "category"
+            },
+            "dataReductionAlgorithm": {
+              "top": {}
+            }
+          }
+        }
+      }
+    ]
+}

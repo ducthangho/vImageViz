@@ -1,0 +1,10 @@
+{
+    "locale": "en-US",
+    "values": {
+        "settingsImageUrl": "Image url",
+        "settingsImageOptions": "Image options",
+        "settingsCircle": "Circle",
+        "settingsBorderColor": "Border color",
+        "settingsBorderWidth": "Border width"
+    }
+}

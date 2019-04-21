@@ -1,0 +1,27 @@
+{
+  "visual": {
+    "name": "vImage",
+    "displayName": "VImage",
+    "guid": "vImage9A4E60DA8D8644E6856BE871F0717518",
+    "visualClassName": "ImageVisual",
+    "version": "1.0.0",
+    "description": "Custom data-bound image control",
+    "supportUrl": "",
+    "gitHubUrl": ""
+  },
+  "apiVersion": "2.5.0",
+  "author": {
+    "name": "Duc Thang Ho",
+    "email": "ducthangho@gmail.com"
+  },
+  "assets": {
+    "icon": "assets/icon.png"
+  },
+  "externalJS": [
+    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js"
+  ],
+  "style": "style/visual.less",
+  "capabilities": "capabilities.json",
+  "dependencies": "dependencies.json",
+  "stringResources": ["stringResources/en-US.json"]
+}

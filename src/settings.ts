@@ -24,36 +24,38 @@
  *  THE SOFTWARE.
  */
 
-module powerbi.extensibility.visual {
-    "use strict";
-    import DataViewObjectsParser = powerbi.extensibility.utils.dataview.DataViewObjectsParser;
 
-    export function logExceptions(): MethodDecorator {
-        return function (target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor<Function>)
-        : TypedPropertyDescriptor<Function> {
-            
-            return {
-                value: function () {
-                    try {
-                        return descriptor.value.apply(this, arguments);
-                    } catch (e) {
-                        console.error(e);
-                        throw e;
-                    }
+import {
+    dataViewObjectsParser
+} from "powerbi-visuals-utils-dataviewutils";
+import DataViewObjectsParser = dataViewObjectsParser.DataViewObjectsParser;
+
+
+export function logExceptions(): MethodDecorator {
+
+    return function(target: Object, propertyKey: string, descriptor: TypedPropertyDescriptor < any > ): TypedPropertyDescriptor < any > {
+
+        return {
+            value: function() {
+
+                try {
+                    return descriptor.value.apply(this, arguments);
+                } catch (e) {
+                    console.error(e);
+                    throw e;
                 }
             }
         }
     }
 
-    export class VisualSettings extends DataViewObjectsParser {
-        public imageOptions: imageSettings = new imageSettings();
-      }
+}
 
-    export class imageSettings {   
-        public circle: boolean = false;  
-        public borderColor: string = "#fff";
-        public borderWidth: number = 5;        
-     }
+export class VisualSettings extends DataViewObjectsParser {
+    public imageOptions: imageSettings = new imageSettings();
+}
 
-
+export class imageSettings {
+    public circle: boolean = false;
+    public borderColor: string = "#fff";
+    public borderWidth: number = 5;
 }

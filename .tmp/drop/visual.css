@@ -1,1 +1,11 @@
-.visual-vImage9A4E60DA8D8644E6856BE871F0717518 .image-container{width:100%}.visual-vImage9A4E60DA8D8644E6856BE871F0717518 img{display:block;margin-left:auto;margin-right:auto}.visual-vImage9A4E60DA8D8644E6856BE871F0717518 .circle{border-radius:50%}/*# sourceMappingURL=visual.css.map */
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+p em {
+  background: yellow;
+  padding: 5px;
+}
+
+
+/*# sourceMappingURL=visual.css.map*/

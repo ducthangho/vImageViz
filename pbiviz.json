@@ -1,12 +1,12 @@
 {
   "visual": {
-    "name": "vImage",
-    "displayName": "VImage",
-    "guid": "vImage9A4E60DA8D8644E6856BE871F0717518",
+    "name": "ImageViz",
+    "displayName": "ImageViz",
+    "guid": "ImageViz",
     "visualClassName": "ImageVisual",
     "version": "1.0.0",
     "description": "Custom data-bound image control",
-    "supportUrl": "",
+    "supportUrl": "https://github.com/ducthangho/vImageViz",
     "gitHubUrl": ""
   },
   "apiVersion": "2.5.0",
@@ -17,11 +17,8 @@
   "assets": {
     "icon": "assets/icon.png"
   },
-  "externalJS": [
-    "node_modules/powerbi-visuals-utils-dataviewutils/lib/index.js"
-  ],
+  "externalJS": null,
   "style": "style/visual.less",
-  "capabilities": "capabilities.json",
-  "dependencies": "dependencies.json",
-  "stringResources": ["stringResources/en-US.json"]
+  "capabilities": "capabilities.json",  
+  "stringResources": ["stringResources/en-US/resources.resjson"]
 }

@@ -1,6 +1,22 @@
 {
   "name": "visual",
+  "scripts": {
+    "pbiviz": "pbiviz",
+    "start": "pbiviz start",
+    "package": "pbiviz package"
+  },
   "dependencies": {
-    "powerbi-visuals-utils-dataviewutils": "^1.5.0"
+    "@babel/polyfill": "^7.4.3",
+    "@babel/runtime": "^7.4.3",
+    "@babel/runtime-corejs2": "^7.4.3",
+    "powerbi-visuals-tools": "^3.0.12",
+    "powerbi-visuals-utils-dataviewutils": "^2.1.1",
+    "tslint": "^4.4.2",
+    "tslint-microsoft-contrib": "^4.0.0"
+  },
+  "devDependencies": {
+    "powerbi-visuals-api": "^2.5.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.0.1"
   }
 }

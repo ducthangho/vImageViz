@@ -12,8 +12,12 @@ export declare class ImageVisual implements IVisual {
     private settings;
     private dataView;
     private updateCount;
+    private imageContainer;
+    private imageHolder;
+    private chartContainer;
     constructor(options: VisualConstructorOptions);
     update(options: VisualUpdateOptions): void;
     private static parseSettings;
     enumerateObjectInstances(options: EnumerateVisualObjectInstancesOptions): VisualObjectInstance[] | VisualObjectInstanceEnumerationObject;
+    destroy(): void;
 }

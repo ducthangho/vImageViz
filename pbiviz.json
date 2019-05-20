@@ -1,13 +1,13 @@
 {
   "visual": {
-    "name": "ImageViz",
-    "displayName": "ImageViz",
-    "guid": "ImageViz",
+    "name": "vImage",
+    "displayName": "VImage",
+    "guid": "vImage9A4E60DA8D8644E6856BE871F0717518",
     "visualClassName": "ImageVisual",
     "version": "1.0.0",
     "description": "Custom data-bound image control",
     "supportUrl": "https://github.com/ducthangho/vImageViz",
-    "gitHubUrl": ""
+    "gitHubUrl": "https://github.com/ducthangho/vImageViz"
   },
   "apiVersion": "2.5.0",
   "author": {

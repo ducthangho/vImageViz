@@ -1,10 +1,27 @@
-p {
-  font-size: 20px;
-  font-weight: bold;
+.image-container {
+  width: 100%;
+  position: relative;
 }
-p em {
-  background: yellow;
-  padding: 5px;
+.chart-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.minichart {
+  z-index: 10;
+  left: 62.67%;
+  top: 41.55%;
+  width: 27.5%;
+  height: 29.8%;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circle {
+  border-radius: 50%;
 }
 
 

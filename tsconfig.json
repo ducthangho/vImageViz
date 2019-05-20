@@ -2,7 +2,9 @@
     "compilerOptions": {
         "allowJs": false,
         "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
         "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
         "target": "es6",
         "sourceMap": true,
         "outDir": "./.tmp/build/",
@@ -14,7 +16,8 @@
         ]
 
     },
-    "files": [                
-        "./src/visual.ts"
+    "files": [    
+    "src/visual.ts"
     ]
 }
+  

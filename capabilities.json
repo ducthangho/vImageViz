@@ -1,64 +1,90 @@
 {
-    "dataRoles": [
-        {
-            "displayName": "Image url",
-            "displayNameKey": "settingsImageUrl",
-            "name": "category",
-            "kind": "GroupingOrMeasure"
-        }
+    "dataRoles": [{
+        "displayName": "Image url",
+        "displayNameKey": "settingsImageUrl",
+        "name": "imageUrl",
+        "kind": "GroupingOrMeasure"
+    }, {
+        "displayName": "Category",
+        "displayNameKey": "settingsTimeAxis",
+        "name": "category",
+        "kind": "GroupingOrMeasure"
+    }, {
+        "displayName": "Values",
+        "displayNameKey": "settingsDataValues",
+        "name": "values",
+        "kind": "GroupingOrMeasure",
+        "requiredTypes": [{
+            "numeric": true
+        }, {
+            "integer": true
+        }],
+        "preferredTypes": [{
+            "numeric": true
+        }]
+    },{
+        "displayName": "Colors",
+        "displayNameKey": "settingsColor",
+        "name": "colour",
+        "kind": "GroupingOrMeasure"
+    }
     ],
     "objects": {
         "imageOptions": {
             "displayName": "Image options",
             "displayNameKey": "settingsImageOptions",
-          "properties": {
-            "circle": {
-              "displayName": "Circle",
-              "displayNameKey": "settingsCircle",
-              "type": { 
-                "bool": true 
-              }
-            },
-            "borderColor": {
-              "displayName": "Border color",
-              "displayNameKey": "settingsBorderColor",
-              "type": {
-                 "fill": {
-                   "solid": {
-                     "color" : true
-                   }
-                 }
-              }
-            },
-            "borderWidth": {
-              "displayName": "Border width",
-              "displayNameKey": "settingsBorderWidth",
-              "type": { 
-                "integer": true 
-              }
+            "properties": {
+                "circle": {
+                    "displayName": "Circle",
+                    "displayNameKey": "settingsCircle",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "borderColor": {
+                    "displayName": "Border color",
+                    "displayNameKey": "settingsBorderColor",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "borderWidth": {
+                    "displayName": "Border width",
+                    "displayNameKey": "settingsBorderWidth",
+                    "type": {
+                        "integer": true
+                    }
+                }
             }
-          }
         }
     },
-    "dataViewMappings": [
-      {
-        "conditions": [
-          {
+    "dataViewMappings": [{
+        "conditions": [{
             "category": {
-              "max": 1
-            }
-          }
-        ],
-        "categorical": {
-          "categories": {
-            "for": {
-              "in": "category"
+                "max": 1
             },
-            "dataReductionAlgorithm": {
-              "top": {}
+            "values": {
+                "max": 1
             }
-          }
+        }],
+        "categorical": {
+            "categories": {
+                "select": [                    
+                    {"for": { "in": "imageUrl" }},
+                    {"for": { "in": "category" }}                    
+                ]                
+            },
+            "values": {                               
+                "select": [                                        
+                    {"bind": {"to": "values"}},
+                    {"for": { "in": "colour" }}
+                ]            
+            }
         }
-      }
-    ]
+
+    }]
 }
